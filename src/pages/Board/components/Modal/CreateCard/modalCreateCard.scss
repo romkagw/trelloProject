@@ -1,0 +1,78 @@
+.card-textarea {
+	border: 0;
+	max-height: 140px;
+	outline: 2px dashed gray;
+	outline-offset: -2px;
+	resize: none;
+	padding: 15px 5px 5px;
+	font-size: 14px;
+	font-family: inherit;
+	border-radius: 8px;
+	margin-bottom: 12px;
+}
+
+.block-button {
+	display: flex;
+	justify-content: space-between;
+}
+
+.add-new-card {
+	margin-left: 11px;
+	margin-bottom: 5px;
+	font-size: 12px;
+	padding: 2px;
+	border-radius: 8px;
+	background-color: #377374;
+	color: white;
+	width: 128px;
+	border: 0;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.add-new-card:hover {
+	background-color: #276566;
+	transform: translateY(-1px);
+}
+.add-new-card:active {
+	transform: translateY(1px);
+}
+
+.add-new-card:disabled {
+	background-color: rgb(157, 216, 216);
+	cursor: no-drop;
+}
+
+.add-new-card:disabled:hover {
+	transform: translateY(0px);
+}
+
+.close-create-card {
+	margin: 0 5px 5px 0;
+	border-radius: 50%;
+	width: 22px;
+	height: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #cefdfd;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.close-create-card:hover {
+	transform: translateY(-2px);
+	background-color: rgb(230, 58, 58);
+}
+
+.close-create-card:active {
+	transform: translateY(2px);
+}
+
+.error_massage_modal_card {
+	color: red;
+	font-size: 12px;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}

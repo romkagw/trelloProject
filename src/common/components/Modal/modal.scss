@@ -1,0 +1,33 @@
+.back-drop {
+	background-color: rgb(0, 0, 0);
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+}
+
+// .transparent-drop {
+// 	position: fixed;
+// 	right: 0;
+// 	bottom: 0;
+// 	top: 0;
+// 	left: 0;
+// }
+
+.modal-content-center {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: fixed;
+	border-radius: 12px;
+}
+.modal-block {
+	width: fit-content;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	border-radius: 12px;
+	margin-bottom: 12px;
+}

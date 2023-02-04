@@ -1,0 +1,22 @@
+.loader-block {
+	position: absolute;
+	bottom: 60px;
+	height: 77px;
+	width: -webkit-fill-available;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	transition: 0.5s;
+}
+
+.drjYbJ {
+	margin-top: 10px;
+	width: 48px;
+	margin-left: 15px;
+	stroke: rgb(0 255 247);
+}
+
+.loader-block h2 {
+	color: white;
+	line-height: 80px;
+}

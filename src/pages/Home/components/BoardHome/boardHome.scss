@@ -1,0 +1,65 @@
+a {
+	text-decoration: none;
+}
+.board-cart {
+	position: relative;
+	width: 230px;
+	height: 230px;
+	background-image: url('../../../../common/board.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 15px;
+	transition: 0.9s;
+	cursor: pointer;
+}
+
+.board_title {
+	margin-top: 78px;
+	text-align: center;
+	height: 79px;
+	width: 165px;
+	color: black;
+	font-size: 24px;
+	transition: 0.9s;
+}
+
+.board-cart button {
+	position: absolute;
+	color: #ff0000;
+	right: 40px;
+	bottom: 35px;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	border: none;
+	background: none;
+	opacity: 0;
+	font-family: monospace;
+	font-size: 13px;
+	padding: 2px;
+	cursor: pointer;
+	transform: skew(-13deg, 3deg);
+	transition: 0.4s;
+}
+
+// .board-cart:hover {
+// 	transform: scale(1.1);
+// }
+
+.board-cart:hover button {
+	opacity: 0.6;
+}
+
+.board-cart button:hover {
+	opacity: 1;
+	color: #ff0505;
+}
+
+.board-animation {
+	transform: rotateY(360deg);
+}

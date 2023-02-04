@@ -1,0 +1,78 @@
+.modal-input-list {
+	width: 195px;
+	height: 25px;
+	border: 0;
+	border-bottom: 2px solid gray;
+	text-align: center;
+	margin: 0px 0 7px 25px;
+	border-radius: 5px;
+}
+
+.close_list_form {
+	margin: 4px 0 0 243px;
+	border-radius: 50%;
+	width: 22px;
+	height: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #cefdfd;
+	cursor: pointer;
+	transition: 0.3s;
+	z-index: 10;
+}
+
+.close_list_form:hover {
+	transform: translateY(-2px);
+	background-color: rgb(230, 58, 58);
+}
+
+.close_list_form:active {
+	transform: translateY(2px);
+}
+.add_list_btn_modal {
+	margin-left: 144px;
+	font-size: 13px;
+	padding: 2px;
+	border-radius: 8px;
+	background-color: #377374;
+	color: white;
+	width: 124px;
+	border: 0;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.add_list_btn_modal:hover {
+	background-color: #276566;
+	transform: translateY(-1px);
+}
+
+.add_list_btn_modal:active {
+	transform: translateY(1px);
+}
+
+.counter-liters {
+	position: absolute;
+	right: 12px;
+	top: 30px;
+	font-size: 12px;
+}
+
+.error_massage_modal_list {
+	color: red;
+	font-size: 12px;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 2px;
+}
+
+.add_list_btn_modal:disabled {
+	background-color: rgb(157, 216, 216);
+	cursor: no-drop;
+}
+
+.add_list_btn_modal:disabled:hover {
+	transform: translateY(0px);
+}

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+body {
+	background-image: url('../../common/bg.jpg');
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+.board-container {
+	margin-left: 5%;
+	width: 90%;
+}
+.heading-block {
+	margin: 0 auto;
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+}
+
+.title-board:focus {
+	outline: 2px solid gray;
+	outline-offset: 3px;
+	border-radius: 4px;
+	background-color: white;
+}
+.title-board {
+	width: fit-content;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-size: 28px;
+}
+.edit-name-board {
+	width: fit-content;
+	text-align: center;
+	color: rgb(0, 0, 0);
+	font-size: 25px;
+	padding-top: 4px;
+	transition: 0.4s;
+}
+
+.error-message-edit-title {
+	position: absolute;
+	font-size: 14px;
+	top: 20px;
+	color: red;
+}
+
+.board-content {
+	position: absolute;
+	top: 80px;
+	overflow: auto;
+	display: flex;
+	min-height: 420px;
+	padding-bottom: 55px;
+}
+
+.board-content > button {
+	min-width: 275px;
+	height: 56px;
+	background-color: rgb(255 255 255 / 55%);
+	border-radius: 15px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	justify-content: space-evenly;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.board-content > button:hover {
+	background-color: rgb(255 255 255 / 95%);
+}
+
+.button-home {
+	top: 20px;
+	padding: 5px;
+	border: 1px solid black;
+	background: #ff8383;
+	color: white;
+	border-radius: 4px;
+	text-decoration: none;
+	position: relative;
+}
