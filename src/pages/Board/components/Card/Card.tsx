@@ -49,7 +49,8 @@ const Card = ({ title, listId, id, position }: ICard) => {
     });
 
     setTimeout(() => {
-      e.target.style.display = "none";
+      e.target.classList.add("placeholder");
+      // e.target.style.display = "none";
     }, 0);
   };
 
@@ -80,6 +81,10 @@ const Card = ({ title, listId, id, position }: ICard) => {
       cardContainer.style.flexDirection =
         e.pageY < centerCart ? "column-reverse" : "column";
     }
+    const placeholder = document.querySelector(".placeholder");
+    if (placeholder && document.querySelector(".slot")) {
+      placeholder.classList.add("hidden");
+    }
   };
 
   const dragLeaveHandler = (e: any) => {
@@ -103,7 +108,14 @@ const Card = ({ title, listId, id, position }: ICard) => {
     }
   };
 
-  const dragEndHandler = (e: any) => {};
+  const dragEndHandler = (e: any) => {
+    e.target.classList.remove("hidden");
+    e.target.classList.remove("placeholder");
+  };
+
+  const dropHandler = (e: any) => {
+    console.log(e.target);
+  };
 
   return (
     <>
@@ -131,10 +143,10 @@ const Card = ({ title, listId, id, position }: ICard) => {
       ) : (
         <div
           className="card_container"
-          draggable
           onDragEnter={dragEnterHandler}
           onDragOver={dragOverHandler}
           onDragLeave={dragLeaveHandler}
+          onDragEnd={dragEndHandler}
         >
           <div
             className="card-content"
