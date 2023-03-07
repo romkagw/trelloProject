@@ -1,5 +1,4 @@
 import axios from "axios";
-import { text } from "stream/consumers";
 import Swal from "sweetalert2";
 import { api } from "../common/constants";
 import { setLoading } from "../store/modules/loading/actions";

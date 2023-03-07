@@ -1,100 +1,113 @@
 .card-content {
-	position: relative;
-	word-break: break-all;
-	white-space: break-spaces;
-	padding: 20px 10px 10px;
-	margin: 10px 0;
-	border-radius: 10px;
-	width: 200px;
-	height: -moz-fit-content;
-	height: fit-content;
-	font-size: 20px;
-	background-color: rgb(252, 252, 252);
-	transition: 0.4s;
+  pointer-events: bounding-box;
+  position: relative;
+  word-break: break-word;
+  white-space: break-spaces;
+  border-radius: 10px;
+  width: 200px;
+  padding: 10px;
+  margin: 4px 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 20px;
+  background-color: rgb(252, 252, 252);
+  transition: 0.4s;
+  cursor: move;
+}
+.card_container {
+  display: flex;
+  opacity: 0.9999;
+  flex-direction: column;
+}
+
+.slot {
+  margin: 3px 0;
+  width: 220px;
+  height: 0px;
+  background-color: rgba(54, 56, 56, 0.4);
+  border-radius: 10px;
+  display: block;
+  box-shadow: inset 3px 3px 9px 2px #343534;
 }
 
 .rename-card-btn {
-	font-size: 22px;
-	position: absolute;
-	right: 7px;
-	top: 5px;
-	cursor: pointer;
-	opacity: 0;
-	transition: 0.3s;
-}
-
-.card-content:hover {
-	background-color: rgba(211, 211, 211, 0.568);
+  font-size: 22px;
+  position: absolute;
+  right: 7px;
+  top: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s;
 }
 
 .card-content:hover .rename-card-btn {
-	opacity: 1;
+  opacity: 1;
 }
 
 .rename-card-btn:hover {
-	transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .rename-card-btn:active {
-	transform: scale(1);
+  transform: scale(1);
 }
 
 .edit-contents-card {
-	border: 0;
-	min-height: 35px;
-	min-width: 230px;
-	max-height: 140px;
-	outline: 3px dashed gray;
-	outline-offset: -3px;
-	resize: none;
-	padding: 15px 5px 5px;
-	font-size: 16px;
-	font-family: inherit;
-	border-radius: 8px;
+  border: 0;
+  min-height: 35px;
+  min-width: 230px;
+  max-height: 140px;
+  outline: 3px dashed gray;
+  outline-offset: -3px;
+  resize: none;
+  padding: 15px 5px 5px;
+  font-size: 16px;
+  font-family: inherit;
+  border-radius: 8px;
 }
 
 .block-btn-card {
-	display: flex;
-	justify-content: space-around;
-	margin-bottom: 5px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
 }
 
 .btn-save-contents-card {
-	width: 23px;
-	height: 23px;
-	border-radius: 50%;
-	padding: 7px;
-	background-color: #46ec37;
-	transform: scale(0.9);
-	cursor: pointer;
-	transition: 0.3s;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  padding: 7px;
+  background-color: #46ec37;
+  transform: scale(0.9);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn-delete-card {
-	width: 23px;
-	height: 23px;
-	border-radius: 50%;
-	padding: 7px;
-	background-color: #ff4040;
-	transform: scale(0.9);
-	cursor: pointer;
-	transition: 0.3s;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  padding: 7px;
+  background-color: #ff4040;
+  transform: scale(0.9);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn-delete-card:hover,
 .btn-save-contents-card:hover {
-	transform: scale(1);
+  transform: scale(1);
 }
 
 .btn-delete-card:active,
 .btn-save-contents-card:active {
-	transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .error-massage-card-edit {
-	position: absolute;
-	color: red;
-	font-size: 13px;
-	width: 90%;
-	text-align: center;
+  position: absolute;
+  color: red;
+  font-size: 13px;
+  width: 90%;
+  text-align: center;
 }

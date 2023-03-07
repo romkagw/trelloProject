@@ -2,19 +2,22 @@ const initialState = {};
 
 export default function boardReducer(
   state = initialState,
-  action: { type: string; payload?: any }
+  { type, payload }: { type: string; payload?: any }
 ) {
-  switch (action.type) {
+  switch (type) {
     case "GET_BOARD_ID":
       return {
         ...state,
-        ...action.payload,
+        ...payload,
       };
     case "INITIAL_STATE":
       return initialState;
-
-    default: {
-      return { ...state };
-    }
+    case "HEIGHT_CARD":
+      return {
+        ...state,
+        heightCard: payload,
+      };
+    default:
+      return state;
   }
 }
