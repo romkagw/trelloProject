@@ -74,6 +74,21 @@ export const removeList =
     }
   };
 
+export const editingGroup =
+  (
+    boards_id: string | undefined,
+    arr: { id: number; position: number; list_id: number }[]
+  ) =>
+  async (dispatch: AppDispatch) => {
+    try {
+      await instance.put(api.baseURL + "/board/" + boards_id + "/card", arr);
+
+      dispatch(getBoardsId(boards_id));
+    } catch (e) {
+      dispatch({ type: "ERROR_ACTION_TYPE" });
+    }
+  };
+
 export const createCard =
   (
     board_id: string | undefined,

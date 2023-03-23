@@ -42,80 +42,15 @@ const Card = ({ title, listId, id, position }: ICard) => {
     setIsShow(false);
   };
 
-  const dragStartHandler = (e: any) => {
-    dispatch({
-      type: "HEIGHT_CARD",
-      payload: e.target.scrollHeight,
-    });
+  const dragStartHandler = (e: any) => {};
 
-    setTimeout(() => {
-      e.target.classList.add("placeholder");
-      // e.target.style.display = "none";
-    }, 0);
-  };
+  const dragEnterHandler = (e: any) => {};
 
-  const dragEnterHandler = (e: any) => {
-    const target = e.target;
+  const dragOverHandler = (e: any) => {};
 
-    if (target.className === "card-content") {
-      const cardContainer = target.parentElement;
-      const slots = cardContainer.querySelectorAll(".slot");
+  const dragLeaveHandler = (e: any) => {};
 
-      if (!slots.length) {
-        const slot = document.createElement("div");
-        slot.classList.add("slot");
-        slot.style.height = state.heightCard + "px";
-        target.insertAdjacentElement("afterend", slot);
-      }
-    }
-  };
-
-  const dragOverHandler = (e: any) => {
-    const target = e.target;
-
-    if (target.className === "card-content") {
-      const coordinate = target.getBoundingClientRect();
-      const centerCart = coordinate.top + target.scrollHeight / 2;
-
-      const cardContainer = target.parentElement;
-      cardContainer.style.flexDirection =
-        e.pageY < centerCart ? "column-reverse" : "column";
-    }
-    const placeholder = document.querySelector(".placeholder");
-    if (placeholder && document.querySelector(".slot")) {
-      placeholder.classList.add("hidden");
-    }
-  };
-
-  const dragLeaveHandler = (e: any) => {
-    const target = e.target;
-
-    // получаем текущий контейнер
-    const cardContainer = target.closest(".card_container");
-
-    // получаем координаты текущего контейнера
-    const containerCoordinate = cardContainer.getBoundingClientRect();
-
-    // проверяем, что курсор мыши действительно находится за пределами текущего контейнера
-    if (
-      e.clientX < containerCoordinate.left ||
-      e.clientX > containerCoordinate.right ||
-      e.clientY < containerCoordinate.top ||
-      e.clientY > containerCoordinate.bottom - 5
-    ) {
-      const slots = cardContainer.querySelectorAll(".slot");
-      slots.forEach((slot: any) => slot.remove());
-    }
-  };
-
-  const dragEndHandler = (e: any) => {
-    e.target.classList.remove("hidden");
-    e.target.classList.remove("placeholder");
-  };
-
-  const dropHandler = (e: any) => {
-    console.log(e.target);
-  };
+  const dragEndHandler = (e: any) => {};
 
   return (
     <>
@@ -141,17 +76,14 @@ const Card = ({ title, listId, id, position }: ICard) => {
           </div>
         </div>
       ) : (
-        <div
-          className="card_container"
-          onDragEnter={dragEnterHandler}
-          onDragOver={dragOverHandler}
-          onDragLeave={dragLeaveHandler}
-          onDragEnd={dragEndHandler}
-        >
+        <div className="card_container">
           <div
             className="card-content"
             onDragStart={dragStartHandler}
-            draggable
+            onDragEnter={dragEnterHandler}
+            onDragOver={dragOverHandler}
+            onDragLeave={dragLeaveHandler}
+            onDragEnd={dragEndHandler}
           >
             {textCart}
             <BsPencil
